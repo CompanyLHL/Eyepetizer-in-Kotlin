@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/Users/catherine/AndroidStudioProjects/Eyepetizer-in-Kotlin/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar
+FILE_HASH=b858c8ad3c2120a43b06e491e28722ac52208821
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true
