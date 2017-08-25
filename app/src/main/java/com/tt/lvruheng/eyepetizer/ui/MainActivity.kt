@@ -1,15 +1,10 @@
 package com.tt.lvruheng.eyepetizer.ui
 
-import android.graphics.Typeface
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
-import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.search.SEARCH_TAG
 import com.tt.lvruheng.eyepetizer.search.SearchFragment
@@ -20,7 +15,6 @@ import com.tt.lvruheng.eyepetizer.ui.fragment.MineFragment
 import com.tt.lvruheng.eyepetizer.utils.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import android.view.WindowManager
 import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 import com.tt.lvruheng.eyepetizer.utils.TextViewU
 

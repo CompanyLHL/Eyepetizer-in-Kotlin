@@ -13,9 +13,7 @@ import android.view.animation.ScaleAnimation
 object AnimationU {
     fun setSplashAnimation(view: View, listener: Animation.AnimationListener) {
         val alphaAnimation = AlphaAnimation(0.1f, 1.0f)
-        alphaAnimation.duration = 1000
         val scaleAnimation = ScaleAnimation(0.1f, 1.0f, 0.1f, 1.0f, ScaleAnimation.RELATIVE_TO_SELF, 0.5f, ScaleAnimation.RELATIVE_TO_SELF, 0.5f)
-        scaleAnimation.duration = 1000
         val animationSet = AnimationSet(true)
         animationSet.addAnimation(alphaAnimation)
         animationSet.addAnimation(scaleAnimation)
