@@ -75,9 +75,9 @@ class VideoDetailActivity : BaseActivity() {
         var bgUrl = bean.blurred
         bgUrl?.let { ImageLoadUtils.displayHigh(this, iv_bottom_bg, bgUrl) }
         tv_video_desc.text = bean.description
-        tv_video_desc.typeface = Typeface.createFromAsset(this.assets, "fonts/FZLanTingHeiS-DB1-GB-Regular.TTF")
+        tv_video_desc.typeface = TextViewU.getTypeFace("fonts/FZLanTingHeiS-DB1-GB-Regular.TTF")
         tv_video_title.text = bean.title
-        tv_video_title.typeface = Typeface.createFromAsset(this.assets, "fonts/FZLanTingHeiS-L-GB-Regular.TTF")
+        tv_video_title.typeface = TextViewU.getTypeFace("fonts/FZLanTingHeiS-L-GB-Regular.TTF")
         var category = bean.category
         var duration = bean.duration
         var minute = duration?.div(60)

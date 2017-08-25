@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import android.view.WindowManager
 import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
+import com.tt.lvruheng.eyepetizer.utils.TextViewU
 
 
 class MainActivity : BaseActivity(), View.OnClickListener {
@@ -56,7 +57,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     private fun initToolbar() {
         var today = getToday()
         tv_bar_title.text = today
-        tv_bar_title.typeface = Typeface.createFromAsset(this.assets, "fonts/Lobster-1.4.otf")
+        tv_bar_title.typeface = TextViewU.getTypeFace("fonts/Lobster-1.4.otf")
         iv_search.setOnClickListener {
             if (rb_mine.isChecked) {
                 //todo 点击设置

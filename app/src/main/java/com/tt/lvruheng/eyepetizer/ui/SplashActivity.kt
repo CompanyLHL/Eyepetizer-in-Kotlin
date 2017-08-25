@@ -14,6 +14,7 @@ import android.widget.TextView
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 import com.tt.lvruheng.eyepetizer.utils.AnimationU
+import com.tt.lvruheng.eyepetizer.utils.TextViewU
 import com.tt.lvruheng.eyepetizer.utils.newIntent
 import kotlinx.android.synthetic.main.activity_splash.*
 
@@ -29,9 +30,8 @@ class SplashActivity : BaseActivity() {
     }
 
     override fun initView() {
-        val font: Typeface = Typeface.createFromAsset(this.assets, "fonts/Lobster-1.4.otf")
-        tv_name_english.typeface = font
-        tv_english_intro.typeface = font
+        tv_name_english.typeface = TextViewU.getTypeFace("fonts/Lobster-1.4.otf")
+        tv_english_intro.typeface = TextViewU.getTypeFace("fonts/Lobster-1.4.otf")
         AnimationU.setSplashAnimation(iv_icon_splash, object : Animation.AnimationListener {
             override fun onAnimationRepeat(p0: Animation?) {
             }
