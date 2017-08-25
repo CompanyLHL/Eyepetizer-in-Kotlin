@@ -4,9 +4,9 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.view.View
 import com.tt.lvruheng.eyepetizer.R
-import com.tt.lvruheng.eyepetizer.ui.AdviseActivity
-import com.tt.lvruheng.eyepetizer.ui.CacheActivity
-import com.tt.lvruheng.eyepetizer.ui.WatchActivity
+import com.tt.lvruheng.eyepetizer.ui.activity.AdviseActivity
+import com.tt.lvruheng.eyepetizer.ui.activity.CacheActivity
+import com.tt.lvruheng.eyepetizer.ui.activity.WatchActivity
 import kotlinx.android.synthetic.main.mine_fragment.*
 
 /**
@@ -16,15 +16,15 @@ class MineFragment : BaseFragment(),View.OnClickListener{
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.tv_watch ->{
-                var intent = Intent(activity,WatchActivity::class.java)
+                var intent = Intent(activity, WatchActivity::class.java)
                 startActivity(intent)
             }
             R.id.tv_advise ->{
-                var intent = Intent(activity,AdviseActivity::class.java)
+                var intent = Intent(activity, AdviseActivity::class.java)
                 startActivity(intent)
             }
             R.id.tv_save ->{
-                var intent = Intent(activity,CacheActivity::class.java)
+                var intent = Intent(activity, CacheActivity::class.java)
                 startActivity(intent)
             }
         }

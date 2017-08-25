@@ -1,15 +1,12 @@
 package com.tt.lvruheng.eyepetizer.ui.fragment
 
 import android.content.Intent
-import android.util.Log
-import android.view.View
-import android.widget.AdapterView
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.adapter.FindAdapter
 import com.tt.lvruheng.eyepetizer.mvp.contract.FindContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.FindBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.FindPresenter
-import com.tt.lvruheng.eyepetizer.ui.FindDetailActivity
+import com.tt.lvruheng.eyepetizer.ui.activity.FindDetailActivity
 import kotlinx.android.synthetic.main.find_fragment.*
 
 /**
@@ -37,7 +34,7 @@ class FindFragment : BaseFragment(),FindContract.View {
         gv_find.setOnItemClickListener { parent, view, position, id ->
             var bean = mList?.get(position)
             var name = bean?.name
-            var intent : Intent = Intent(context,FindDetailActivity::class.java)
+            var intent : Intent = Intent(context, FindDetailActivity::class.java)
             intent.putExtra("name",name)
             startActivity(intent)
 
