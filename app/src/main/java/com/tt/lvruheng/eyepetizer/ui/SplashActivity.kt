@@ -23,10 +23,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 class SplashActivity : BaseActivity() {
     override fun needFullScreen(): Boolean = true
 
-    override fun setView(): Int {
-        println("setView")
-        return R.layout.activity_splash
-    }
+    override fun setView(): Int = R.layout.activity_splash
 
     override fun getArgs(bundle: Bundle?) {
     }

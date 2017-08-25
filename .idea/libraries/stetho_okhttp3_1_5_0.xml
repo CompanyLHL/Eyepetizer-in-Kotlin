@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="stetho-okhttp3-1.5.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/stetho-okhttp3-1.5.0.aar/5712506f9823846c12292dff6599e270/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/stetho-okhttp3-1.5.0.aar/5712506f9823846c12292dff6599e270/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/stetho-okhttp3-1.5.0.aar/dcffeb4b2e7aec787eea940cb8a653cc/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/stetho-okhttp3-1.5.0.aar/dcffeb4b2e7aec787eea940cb8a653cc/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
