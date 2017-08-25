@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.WindowManager
 import com.gyf.barlibrary.ImmersionBar
+import com.tt.lvruheng.eyepetizer.utils.L
 
 /**
  * Created by catherine on 24/08/2017.
@@ -16,6 +17,7 @@ abstract class BaseActivity : AppCompatActivity() {
         getArgs(this.intent.extras)
         setWindowsFullScreen()
         setContentView(setView())
+        getCurrentActivity()
         initView()
         setListener()
     }
@@ -34,5 +36,9 @@ abstract class BaseActivity : AppCompatActivity() {
     abstract fun setView(): Int
     abstract fun initView()
     abstract fun setListener()
+
+    fun getCurrentActivity() {
+        L.line("当前是=》" + localClassName)
+    }
 
 }
