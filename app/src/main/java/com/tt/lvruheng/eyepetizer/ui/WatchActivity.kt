@@ -14,6 +14,7 @@ import com.tt.lvruheng.eyepetizer.adapter.FeedAdapter
 import com.tt.lvruheng.eyepetizer.adapter.WatchAdapter
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
+import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
 import com.tt.lvruheng.eyepetizer.utils.SPUtils
 import kotlinx.android.synthetic.main.activity_watch.*
@@ -21,18 +22,36 @@ import kotlinx.android.synthetic.main.activity_watch.*
 /**
  * Created by lvruheng on 2017/7/11.
  */
-class WatchActivity : AppCompatActivity() {
+class WatchActivity : BaseActivity() {
+    override fun needFullScreen(): Boolean = false
+
+    override fun getArgs(bundle: Bundle?) {
+    }
+
+    override fun setView(): Int = R.layout.activity_watch
+
+    override fun initView() {
+        setToolbar()
+        DataAsyncTask(mHandler, this).execute()
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        mAdapter = WatchAdapter(this, mList)
+        recyclerView.adapter = mAdapter
+    }
+
+    override fun setListener() {
+    }
+
     var mList = ArrayList<VideoBean>()
     lateinit var mAdapter: WatchAdapter
     var mHandler: Handler = object : Handler() {
         override fun handleMessage(msg: Message?) {
             super.handleMessage(msg)
             var list = msg?.data?.getParcelableArrayList<VideoBean>("beans")
-            if(list?.size?.compareTo(0) == 0){
+            if (list?.size?.compareTo(0) == 0) {
                 tv_hint.visibility = View.VISIBLE
-            }else{
+            } else {
                 tv_hint.visibility = View.GONE
-                if(mList.size>0){
+                if (mList.size > 0) {
                     mList.clear()
                 }
                 list?.let { mList.addAll(it) }
@@ -40,17 +59,6 @@ class WatchActivity : AppCompatActivity() {
             }
 
         }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
-        setContentView(R.layout.activity_watch)
-        setToolbar()
-        DataAsyncTask(mHandler,this).execute()
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        mAdapter = WatchAdapter(this, mList)
-        recyclerView.adapter = mAdapter
     }
 
     private fun setToolbar() {
@@ -71,7 +79,7 @@ class WatchActivity : AppCompatActivity() {
             var count: Int = SPUtils.getInstance(activity, "beans").getInt("count")
             var i = 1
             while (i.compareTo(count) <= 0) {
-                var bean :VideoBean= ObjectSaveUtils.getValue(activity, "bean$i") as VideoBean
+                var bean: VideoBean = ObjectSaveUtils.getValue(activity, "bean$i") as VideoBean
                 list.add(bean)
                 i++
             }
@@ -82,7 +90,7 @@ class WatchActivity : AppCompatActivity() {
             super.onPostExecute(result)
             var message = handler.obtainMessage()
             var bundle = Bundle()
-            bundle.putParcelableArrayList("beans",result)
+            bundle.putParcelableArrayList("beans", result)
             message.data = bundle
             handler.sendMessage(message)
         }

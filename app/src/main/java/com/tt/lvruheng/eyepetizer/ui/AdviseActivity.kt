@@ -15,7 +15,6 @@ class AdviseActivity : BaseActivity() {
     override fun needFullScreen(): Boolean = false
 
     override fun initView() {
-        ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
         setSupportActionBar(toolbar)
         var bar = supportActionBar
         bar?.title = "意见反馈"

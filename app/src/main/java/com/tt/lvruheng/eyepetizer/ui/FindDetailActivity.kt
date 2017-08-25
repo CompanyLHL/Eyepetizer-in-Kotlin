@@ -11,13 +11,47 @@ import com.tt.lvruheng.eyepetizer.adapter.RankAdapter
 import com.tt.lvruheng.eyepetizer.mvp.contract.FindDetailContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.FindDetailPresenter
+import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_find_detail.*
 import java.util.regex.Pattern
 
 /**
  * Created by lvruheng on 2017/7/8.
  */
-class FindDetailActivity : AppCompatActivity(), FindDetailContract.View, SwipeRefreshLayout.OnRefreshListener {
+class FindDetailActivity : BaseActivity(), FindDetailContract.View, SwipeRefreshLayout.OnRefreshListener {
+    override fun getArgs(bundle: Bundle?) {
+    }
+
+    override fun setView(): Int = R.layout.activity_find_detail
+
+    override fun initView() {
+        setToolbar()
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        mAdapter = RankAdapter(this, mList)
+        recyclerView.adapter = mAdapter
+        refreshLayout.setOnRefreshListener(this)
+        mPresenter = FindDetailPresenter(this, this)
+        mPresenter.requestData(name, "date")
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                var layoutManager: LinearLayoutManager = recyclerView?.layoutManager as LinearLayoutManager
+                var lastPositon = layoutManager.findLastVisibleItemPosition()
+                if (newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mList.size - 1) {
+                    if (data != null) {
+                        mPresenter?.requesMoreData(mstart, name, "date")
+                        mstart = mstart.plus(10)
+                    }
+
+                }
+            }
+        })
+    }
+
+    override fun setListener() {
+    }
+
+    override fun needFullScreen(): Boolean = false
 
     lateinit var mPresenter: FindDetailPresenter
     lateinit var mAdapter: RankAdapter
@@ -45,32 +79,6 @@ class FindDetailActivity : AppCompatActivity(), FindDetailContract.View, SwipeRe
     }
 
     lateinit var name: String
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_detail)
-        ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
-        setToolbar()
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        mAdapter = RankAdapter(this, mList)
-        recyclerView.adapter = mAdapter
-        refreshLayout.setOnRefreshListener(this)
-        mPresenter = FindDetailPresenter(this, this)
-        mPresenter.requestData(name, "date")
-        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-                var layoutManager: LinearLayoutManager = recyclerView?.layoutManager as LinearLayoutManager
-                var lastPositon = layoutManager.findLastVisibleItemPosition()
-                if (newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mList.size - 1) {
-                    if (data != null) {
-                        mPresenter?.requesMoreData(mstart, name, "date")
-                        mstart = mstart.plus(10)
-                    }
-
-                }
-            }
-        })
-    }
 
     private fun setToolbar() {
         setSupportActionBar(toolbar)

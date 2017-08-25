@@ -20,6 +20,7 @@ import android.widget.ImageView
 import com.shuyu.gsyvideoplayer.GSYVideoPlayer
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 import com.tt.lvruheng.eyepetizer.utils.*
 import zlc.season.rxdownload2.RxDownload
 import java.io.FileInputStream
@@ -31,7 +32,17 @@ import java.util.concurrent.ExecutionException
 /**
  * Created by lvruheng on 2017/7/7.
  */
-class VideoDetailActivity : AppCompatActivity() {
+class VideoDetailActivity : BaseActivity() {
+    override fun needFullScreen(): Boolean = false
+
+    override fun getArgs(bundle: Bundle?) {
+    }
+
+    override fun setView(): Int = R.layout.activity_video_detail
+
+    override fun setListener() {
+    }
+
     companion object {
         var MSG_IMAGE_LOADED = 101
     }
@@ -56,13 +67,11 @@ class VideoDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_detail)
-        bean = intent.getParcelableExtra<VideoBean>("data")
-        initView()
-        prepareVideo()
+
     }
 
-    private fun initView() {
+    override fun initView() {
+        bean = intent.getParcelableExtra<VideoBean>("data")
         var bgUrl = bean.blurred
         bgUrl?.let { ImageLoadUtils.displayHigh(this, iv_bottom_bg, bgUrl) }
         tv_video_desc.text = bean.description
@@ -101,17 +110,19 @@ class VideoDetailActivity : AppCompatActivity() {
                 }
                 SPUtils.getInstance(this, "downloads").put("count", count)
                 ObjectSaveUtils.saveObject(this, "download$count", bean)
-                addMission(bean.playUrl,count)
+                addMission(bean.playUrl, count)
             } else {
                 showToast("该视频已经缓存过了")
             }
         }
+        prepareVideo()
+
     }
 
     private fun addMission(playUrl: String?, count: Int) {
-        RxDownload.getInstance(this).serviceDownload(playUrl,"download$count").subscribe({
+        RxDownload.getInstance(this).serviceDownload(playUrl, "download$count").subscribe({
             showToast("开始下载")
-            SPUtils.getInstance(this, "downloads").put(bean.playUrl.toString(),bean.playUrl.toString())
+            SPUtils.getInstance(this, "downloads").put(bean.playUrl.toString(), bean.playUrl.toString())
             SPUtils.getInstance(this, "download_state").put(playUrl.toString(), true)
         }, {
             showToast("添加任务失败")
@@ -120,10 +131,10 @@ class VideoDetailActivity : AppCompatActivity() {
 
     private fun prepareVideo() {
         var uri = intent.getStringExtra("loaclFile")
-        if(uri!=null){
-            Log.e("uri",uri)
+        if (uri != null) {
+            Log.e("uri", uri)
             gsy_player.setUp(uri, false, null, null)
-        }else{
+        } else {
             gsy_player.setUp(bean.playUrl, false, null, null)
         }
         //增加封面

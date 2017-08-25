@@ -12,6 +12,7 @@ import com.gyf.barlibrary.ImmersionBar
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.adapter.DownloadAdapter
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
+import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
 import com.tt.lvruheng.eyepetizer.utils.SPUtils
 import kotlinx.android.synthetic.main.activity_watch.*
@@ -20,7 +21,32 @@ import zlc.season.rxdownload2.RxDownload
 /**
  * Created by lvruheng on 2017/7/12.
  */
-class CacheActivity : AppCompatActivity() {
+class CacheActivity : BaseActivity() {
+    override fun needFullScreen(): Boolean = false
+
+    override fun initView() {
+        setToolbar()
+        DataAsyncTask(mHandler, this).execute()
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        mAdapter = DownloadAdapter(this, mList)
+
+
+        recyclerView.adapter = mAdapter
+    }
+
+    override fun setListener() {
+        mAdapter.setOnLongClickListener(object : DownloadAdapter.OnLongClickListener {
+            override fun onLongClick(position: Int) {
+                addDialog(position)
+            }
+        })
+    }
+
+    override fun getArgs(bundle: Bundle?) {
+    }
+
+    override fun setView(): Int = R.layout.activity_watch
+
     var mList = ArrayList<VideoBean>()
     lateinit var mAdapter: DownloadAdapter
     var mHandler: Handler = object : Handler() {
@@ -39,23 +65,6 @@ class CacheActivity : AppCompatActivity() {
             }
 
         }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_watch)
-        ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
-        setToolbar()
-        DataAsyncTask(mHandler, this).execute()
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        mAdapter = DownloadAdapter(this, mList)
-        mAdapter.setOnLongClickListener(object : DownloadAdapter.OnLongClickListener {
-            override fun onLongClick(position: Int) {
-                addDialog(position)
-            }
-        })
-
-        recyclerView.adapter = mAdapter
     }
 
     private fun addDialog(position: Int) {
@@ -90,6 +99,7 @@ class CacheActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
+
     }
 
     private class DataAsyncTask(handler: Handler, activity: CacheActivity) : AsyncTask<Void, Void, ArrayList<VideoBean>>() {

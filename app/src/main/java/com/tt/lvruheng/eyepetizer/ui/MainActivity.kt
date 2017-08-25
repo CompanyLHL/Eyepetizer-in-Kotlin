@@ -21,10 +21,30 @@ import com.tt.lvruheng.eyepetizer.utils.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import android.view.WindowManager
+import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 
 
+class MainActivity : BaseActivity(), View.OnClickListener {
+    override fun needFullScreen(): Boolean = false
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+    override fun getArgs(bundle: Bundle?) {
+        initFragment(bundle)
+    }
+
+    override fun setView(): Int = R.layout.activity_main
+
+    override fun initView() {
+        val window = window
+        val params = window.attributes
+        params.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        window.attributes = params
+        setRadioButton()
+        initToolbar()
+    }
+
+    override fun setListener() {
+    }
+
     var homeFragment: HomeFragment? = null
     var findFragment: FindFragment? = null
     var hotFragemnt: HotFragment? = null
@@ -32,18 +52,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     var mExitTime: Long = 0
     var toast: Toast? = null
     lateinit var searchFragment: SearchFragment
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
-        val window = window
-        val params = window.attributes
-        params.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-        window.attributes = params
-        setRadioButton()
-        initToolbar()
-        initFragment(savedInstanceState)
-    }
 
     private fun initToolbar() {
         var today = getToday()

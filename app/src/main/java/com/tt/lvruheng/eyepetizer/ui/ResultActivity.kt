@@ -12,23 +12,22 @@ import com.tt.lvruheng.eyepetizer.adapter.FeedAdapter
 import com.tt.lvruheng.eyepetizer.mvp.contract.ResultContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.ResultPresenter
+import com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_find_detail.*
 import kotlin.collections.ArrayList
 
 /**
  * Created by lvruheng on 2017/7/11.
  */
-class ResultActivity : AppCompatActivity(), ResultContract.View, SwipeRefreshLayout.OnRefreshListener {
-    lateinit var keyWord: String
-    lateinit var mPresenter: ResultPresenter
-    lateinit var mAdapter: FeedAdapter
-    var mIsRefresh: Boolean = false
-    var mList = ArrayList<HotBean.ItemListBean.DataBean>()
-    var start: Int = 10
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        ImmersionBar.with(this).transparentBar().barAlpha(0.3f).fitsSystemWindows(true).init()
-        setContentView(R.layout.activity_result)
+class ResultActivity : BaseActivity(), ResultContract.View, SwipeRefreshLayout.OnRefreshListener {
+    override fun needFullScreen(): Boolean = false
+
+    override fun getArgs(bundle: Bundle?) {
+    }
+
+    override fun setView(): Int = R.layout.activity_result
+
+    override fun initView() {
         keyWord = intent.getStringExtra("keyWord")
         mPresenter = ResultPresenter(this, this)
         mPresenter.requestData(keyWord, start)
@@ -37,6 +36,9 @@ class ResultActivity : AppCompatActivity(), ResultContract.View, SwipeRefreshLay
         mAdapter = FeedAdapter(this, mList)
         recyclerView.adapter = mAdapter
         refreshLayout.setOnRefreshListener(this)
+    }
+
+    override fun setListener() {
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
@@ -48,6 +50,17 @@ class ResultActivity : AppCompatActivity(), ResultContract.View, SwipeRefreshLay
                 }
             }
         })
+    }
+
+    lateinit var keyWord: String
+    lateinit var mPresenter: ResultPresenter
+    lateinit var mAdapter: FeedAdapter
+    var mIsRefresh: Boolean = false
+    var mList = ArrayList<HotBean.ItemListBean.DataBean>()
+    var start: Int = 10
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
     }
 
     private fun setToolbar() {
