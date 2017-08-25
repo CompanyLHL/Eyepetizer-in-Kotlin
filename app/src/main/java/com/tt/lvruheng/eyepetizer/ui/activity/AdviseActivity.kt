@@ -5,7 +5,7 @@ import kotlinx.android.synthetic.main.activity_advise.*
 /**
  * Created by lvruheng on 2017/7/11.
  */
-class AdviseActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity() {
+class AdviseActivity : BaseActivity() {
     override fun needFullScreen(): Boolean = false
 
     override fun initView() {

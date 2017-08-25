@@ -5,7 +5,7 @@ import kotlinx.android.synthetic.main.activity_find_detail.*
 /**
  * Created by lvruheng on 2017/7/8.
  */
-class FindDetailActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity(), com.tt.lvruheng.eyepetizer.mvp.contract.FindDetailContract.View, android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener {
+class FindDetailActivity : BaseActivity(), com.tt.lvruheng.eyepetizer.mvp.contract.FindDetailContract.View, android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener {
     override fun getArgs(bundle: android.os.Bundle?) {
     }
 

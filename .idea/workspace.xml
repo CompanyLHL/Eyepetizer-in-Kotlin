@@ -17,30 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f770f1ce-334d-4035-8da0-5c5300854c13" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/AdviseActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/CacheActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/FindDetailActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/ResultActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/ResultActivity.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/SplashActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/SplashActivity.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/VideoDetailActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/WatchActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/WatchActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/DownloadAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FeedAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/FeedAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/HomeAdatper.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/RankAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/SearchAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/WatchAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/adapter/WatchAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/search/SearchFragment.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/FindFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/FindFragment.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/MineFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/fragment/MineFragment.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,18 +62,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding>
-                <marker date="1503651471000" expanded="true" signature="48:642" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ResultActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/ResultActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,50 +74,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdviseActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt">
+      <file leaf-file-name="BaseActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CacheActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
-                <element signature="e#48#161#0" expanded="true" />
+                <element signature="e#48#235#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoDetailActivity.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseApplication.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseApplication.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="e#48#109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CacheActivity.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="98" column="45" lean-forward="true" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+              <folding>
+                <element signature="e#48#401#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdviseActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoDetailActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="266">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#48#151#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1432">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -166,24 +144,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindDetailActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+            <state relative-caret-position="392">
+              <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
               <folding />
             </state>
           </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseActivity.kt">
+      <file leaf-file-name="FindDetailActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <folding>
-                <element signature="e#48#235#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="133">
+              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,12 +215,14 @@
       <find>by la</find>
       <find>by laz</find>
       <find>by lazy</find>
-      <find>kotlinx.android.synthetic.main.activity_advise.</find>
       <find>kotlinx.android.synthetic.main.activity_main.</find>
       <find>kotlinx.android.synthetic.main.activity_watch.</find>
+      <find>kotlinx.android.synthetic.main.activity_video_detail.</find>
       <find>kotlinx.android.synthetic.main.activity_find_detail.</find>
+      <find>kotlinx.android.synthetic.main.activity_advise.</find>
     </findStrings>
     <replaceStrings>
+      <replace />
       <replace />
       <replace />
       <replace />
@@ -2197,12 +2178,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/ResultActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/SplashActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/WatchActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt" />
       </list>
     </option>
   </component>
@@ -3244,7 +3225,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39826304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32815734" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32815734" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3598,33 +3579,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/TextViewU.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
           <folding>
             <element signature="e#42#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseApplication.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="e#48#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3640,16 +3600,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="e#48#235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1432">
@@ -3659,24 +3609,6 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#161#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt">
@@ -3720,20 +3652,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+        <state relative-caret-position="133">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        <state relative-caret-position="133">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
-            <element signature="e#48#151#0" expanded="true" />
+            <element signature="e#48#235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseApplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#48#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="98" column="45" lean-forward="true" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+          <folding>
+            <element signature="e#48#401#0" expanded="true" />
           </folding>
         </state>
       </provider>

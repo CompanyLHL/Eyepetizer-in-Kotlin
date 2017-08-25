@@ -1,17 +1,22 @@
 package com.tt.lvruheng.eyepetizer.ui.activity
 
+import android.support.v7.app.AlertDialog
+import com.tt.lvruheng.eyepetizer.R
+import com.tt.lvruheng.eyepetizer.adapter.DownloadAdapter
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
+import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
+import com.tt.lvruheng.eyepetizer.utils.SPUtils
 import kotlinx.android.synthetic.main.activity_watch.*
 
 /**
  * Created by lvruheng on 2017/7/12.
  */
-class CacheActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity() {
+class CacheActivity : BaseActivity() {
     override fun needFullScreen(): Boolean = false
 
     override fun initView() {
         setToolbar()
-        com.tt.lvruheng.eyepetizer.ui.activity.CacheActivity.DataAsyncTask(mHandler, this).execute()
+        DataAsyncTask(mHandler, this).execute()
         recyclerView.layoutManager = android.support.v7.widget.LinearLayoutManager(this)
         mAdapter = com.tt.lvruheng.eyepetizer.adapter.DownloadAdapter(this, mList)
 
@@ -20,7 +25,7 @@ class CacheActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity() {
     }
 
     override fun setListener() {
-        mAdapter.setOnLongClickListener(object : com.tt.lvruheng.eyepetizer.adapter.DownloadAdapter.OnLongClickListener {
+        mAdapter.setOnLongClickListener(object : DownloadAdapter.OnLongClickListener {
             override fun onLongClick(position: Int) {
                 addDialog(position)
             }
@@ -30,14 +35,14 @@ class CacheActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity() {
     override fun getArgs(bundle: android.os.Bundle?) {
     }
 
-    override fun setView(): Int = com.tt.lvruheng.eyepetizer.R.layout.activity_watch
+    override fun setView(): Int = R.layout.activity_watch
 
-    var mList = ArrayList<com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean>()
-    lateinit var mAdapter: com.tt.lvruheng.eyepetizer.adapter.DownloadAdapter
+    var mList = ArrayList<VideoBean>()
+    lateinit var mAdapter: DownloadAdapter
     var mHandler: android.os.Handler = object : android.os.Handler() {
         override fun handleMessage(msg: android.os.Message?) {
             super.handleMessage(msg)
-            var list = msg?.data?.getParcelableArrayList<com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean>("beans")
+            var list = msg?.data?.getParcelableArrayList<VideoBean>("beans")
             if (list?.size?.compareTo(0) == 0) {
                 tv_hint.visibility = android.view.View.VISIBLE
             } else {
@@ -53,7 +58,7 @@ class CacheActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity() {
     }
 
     private fun addDialog(position: Int) {
-        var builder = android.support.v7.app.AlertDialog.Builder(this)
+        var builder = AlertDialog.Builder(this)
         var dialog = builder.create()
         builder.setMessage("是否删除当前视频")
         builder.setNegativeButton("否", {
@@ -87,19 +92,19 @@ class CacheActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity() {
 
     }
 
-    private class DataAsyncTask(handler: android.os.Handler, activity: com.tt.lvruheng.eyepetizer.ui.activity.CacheActivity) : android.os.AsyncTask<Void, Void, ArrayList<VideoBean>>() {
+    private class DataAsyncTask(handler: android.os.Handler, activity: CacheActivity) : android.os.AsyncTask<Void, Void, ArrayList<VideoBean>>() {
         var activity: com.tt.lvruheng.eyepetizer.ui.activity.CacheActivity = activity
         var handler = handler
-        override fun doInBackground(vararg params: Void?): ArrayList<com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean>? {
-            var list = ArrayList<com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean>()
-            var count: Int = com.tt.lvruheng.eyepetizer.utils.SPUtils.Companion.getInstance(activity, "downloads").getInt("count")
+        override fun doInBackground(vararg params: Void?): ArrayList<VideoBean>? {
+            var list = ArrayList<VideoBean>()
+            var count: Int = SPUtils.Companion.getInstance(activity, "downloads").getInt("count")
             var i = 1
             while (i.compareTo(count) <= 0) {
                 var bean: com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
-                if (com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils.getValue(activity, "download$i") == null) {
+                if (ObjectSaveUtils.getValue(activity, "download$i") == null) {
                     continue
                 } else {
-                    bean = com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils.getValue(activity, "download$i") as com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
+                    bean = ObjectSaveUtils.getValue(activity, "download$i") as VideoBean
                 }
                 list.add(bean)
                 i++
@@ -107,7 +112,7 @@ class CacheActivity : com.tt.lvruheng.eyepetizer.ui.activity.BaseActivity() {
             return list
         }
 
-        override fun onPostExecute(result: ArrayList<com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean>?) {
+        override fun onPostExecute(result: ArrayList<VideoBean>?) {
             super.onPostExecute(result)
             var message = handler.obtainMessage()
             var bundle = android.os.Bundle()
