@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.tt.lvruheng.eyepetizer.R
 import com.google.android.flexbox.FlexboxLayoutManager
-import com.tt.lvruheng.eyepetizer.ui.ResultActivity
+import com.tt.lvruheng.eyepetizer.ui.activity.ResultActivity
 
 
 /**
@@ -39,7 +39,7 @@ class SearchAdapter(context: Context, list: ArrayList<String>) : RecyclerView.Ad
         }
         holder?.itemView?.setOnClickListener {
             var keyWord = list?.get(position)
-            var intent : Intent = Intent(context,ResultActivity::class.java)
+            var intent : Intent = Intent(context, ResultActivity::class.java)
             intent.putExtra("keyWord",keyWord)
             context?.startActivity(intent)
             mDialogListener?.onDismiss()

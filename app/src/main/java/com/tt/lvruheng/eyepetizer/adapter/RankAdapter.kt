@@ -13,7 +13,7 @@ import android.widget.TextView
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HotBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
-import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
+import com.tt.lvruheng.eyepetizer.ui.activity.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
 import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
 import com.tt.lvruheng.eyepetizer.utils.SPUtils

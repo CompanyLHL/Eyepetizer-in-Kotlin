@@ -5,8 +5,6 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.os.Parcelable
 import android.support.v7.widget.RecyclerView
-import android.util.Log
-import android.util.Log.println
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,13 +13,10 @@ import android.widget.TextView
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.VideoBean
-import com.tt.lvruheng.eyepetizer.ui.VideoDetailActivity
+import com.tt.lvruheng.eyepetizer.ui.activity.VideoDetailActivity
 import com.tt.lvruheng.eyepetizer.utils.ImageLoadUtils
 import com.tt.lvruheng.eyepetizer.utils.ObjectSaveUtils
 import com.tt.lvruheng.eyepetizer.utils.SPUtils
-import java.text.SimpleDateFormat
-import java.util.*
-import javax.xml.datatype.Duration
 
 /**
  * Created by lvruheng on 2017/7/5.
@@ -74,7 +69,7 @@ class HomeAdatper(context: Context,list: MutableList<HomeBean.IssueListBean.Item
         }
         holder?.itemView?.setOnClickListener {
             //跳转视频详情页
-            var intent : Intent = Intent(context,VideoDetailActivity::class.java)
+            var intent : Intent = Intent(context, VideoDetailActivity::class.java)
             var desc = bean?.data?.description
             var duration = bean?.data?.duration
             var playUrl = bean?.data?.playUrl
