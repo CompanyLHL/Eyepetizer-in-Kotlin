@@ -16,9 +16,7 @@ class HotFragment : BaseFragment() {
     var mTabs = listOf<String>("周排行", "月排行", "总排行").toMutableList()
     lateinit var mFragments: ArrayList<Fragment>
     val STRATEGY = arrayOf("weekly", "monthly", "historical")
-    override fun getLayoutResources(): Int {
-        return R.layout.hot_fragment
-    }
+    override fun getLayoutResources(): Int = R.layout.hot_fragment
 
     override fun initView() {
         var weekFragment: RankFragment = RankFragment()

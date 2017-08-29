@@ -30,9 +30,7 @@ class MineFragment : BaseFragment(),View.OnClickListener{
         }
     }
 
-    override fun getLayoutResources(): Int {
-        return R.layout.mine_fragment
-    }
+    override fun getLayoutResources(): Int = R.layout.mine_fragment
 
     override fun initView() {
         tv_advise.setOnClickListener(this)

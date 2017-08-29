@@ -17,9 +17,7 @@ class RankFragment : BaseFragment(), HotContract.View {
     lateinit var mStrategy: String
     lateinit var mAdapter: RankAdapter
     var mList: ArrayList<HotBean.ItemListBean.DataBean> = ArrayList()
-    override fun getLayoutResources(): Int {
-        return R.layout.rank_fragment
-    }
+    override fun getLayoutResources(): Int = R.layout.rank_fragment
 
     override fun initView() {
         recyclerView.layoutManager = LinearLayoutManager(context)
@@ -35,7 +33,7 @@ class RankFragment : BaseFragment(), HotContract.View {
 
     override fun setData(bean: HotBean) {
         Log.e("rank", bean.toString())
-        if(mList.size>0){
+        if (mList.size > 0) {
             mList.clear()
         }
         bean.itemList?.forEach {
