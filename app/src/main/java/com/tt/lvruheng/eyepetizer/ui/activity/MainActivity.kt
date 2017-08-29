@@ -30,7 +30,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     override fun needFullScreen(): Boolean = false
 
     override fun getArgs(bundle: Bundle?) {
-        initFragment(bundle)
+//        initFragment(bundle)
     }
 
     override fun setView(): Int = R.layout.activity_main
@@ -42,6 +42,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         window.attributes = params
         setRadioButton()
         initToolbar()
+        initFragment()
     }
 
     override fun setListener() {
@@ -65,46 +66,55 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
     }
 
-    private fun initFragment(savedInstanceState: Bundle?) {
-        if (savedInstanceState != null) {
-            //异常情况
-            val mFragments: List<Fragment> = supportFragmentManager.fragments
-            for (item in mFragments) {
-                if (item is HomeFragment) {
-                    homeFragment = item
-                }
-                if (item is FindFragment) {
-                    findFragment = item
-                }
-                if (item is HotFragment) {
-                    hotFragemnt = item
-                }
-                if (item is MineFragment) {
-                    mineFragment = item
-                }
-            }
-        } else {
-            homeFragment = HomeFragment()
-            findFragment = FindFragment()
-            mineFragment = MineFragment()
-            hotFragemnt = HotFragment()
-            val fragmentTrans = supportFragmentManager.beginTransaction()
-            fragmentTrans.add(R.id.fl_content, homeFragment)
-            fragmentTrans.add(R.id.fl_content, findFragment)
-            fragmentTrans.add(R.id.fl_content, mineFragment)
-            fragmentTrans.add(R.id.fl_content, hotFragemnt)
-            fragmentTrans.commit()
-        }
-        supportFragmentManager.beginTransaction().show(homeFragment)
-                .hide(findFragment)
-                .hide(mineFragment)
-                .hide(hotFragemnt)
-                .commit()
+//    private fun initFragment(savedInstanceState: Bundle?) {
+//        if (savedInstanceState != null) {
+//            //异常情况
+//            val mFragments: List<Fragment> = supportFragmentManager.fragments
+//            for (item in mFragments) {
+//                if (item is HomeFragment) {
+//                    homeFragment = item
+//                }
+//                if (item is FindFragment) {
+//                    findFragment = item
+//                }
+//                if (item is HotFragment) {
+//                    hotFragemnt = item
+//                }
+//                if (item is MineFragment) {
+//                    mineFragment = item
+//                }
+//            }
+//        } else {
+//            homeFragment = HomeFragment()
+//            findFragment = FindFragment()
+//            mineFragment = MineFragment()
+//            hotFragemnt = HotFragment()
+//            val fragmentTrans = supportFragmentManager.beginTransaction()
+//            fragmentTrans.add(R.id.fl_content, homeFragment)
+//            fragmentTrans.add(R.id.fl_content, findFragment)
+//            fragmentTrans.add(R.id.fl_content, mineFragment)
+//            fragmentTrans.add(R.id.fl_content, hotFragemnt)
+//            fragmentTrans.commit()
+//        }
+//        switchFraState(homeFragment, findFragment, hotFragemnt, mineFragment)
+//    }
+
+    private fun initFragment() {
+        homeFragment = HomeFragment()
+        findFragment = FindFragment()
+        mineFragment = MineFragment()
+        hotFragemnt = HotFragment()
+        val fragmentTrans = supportFragmentManager.beginTransaction()
+        fragmentTrans.add(R.id.fl_content, homeFragment)
+        fragmentTrans.add(R.id.fl_content, findFragment)
+        fragmentTrans.add(R.id.fl_content, mineFragment)
+        fragmentTrans.add(R.id.fl_content, hotFragemnt)
+        fragmentTrans.commit()
+        switchFraState(homeFragment, findFragment, hotFragemnt, mineFragment)
     }
 
     private fun setRadioButton() {
-        rb_home.isChecked = true
-        rb_home.setTextColor(resources.getColor(R.color.black))
+        switchFooterState(rb_find)
         rb_home.setOnClickListener(this)
         rb_find.setOnClickListener(this)
         rb_hot.setOnClickListener(this)
