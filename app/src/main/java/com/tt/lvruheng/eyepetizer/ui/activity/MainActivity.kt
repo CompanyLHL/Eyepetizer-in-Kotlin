@@ -9,10 +9,7 @@ import android.widget.Toast
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.search.SEARCH_TAG
 import com.tt.lvruheng.eyepetizer.search.SearchFragment
-import com.tt.lvruheng.eyepetizer.ui.fragment.FindFragment
-import com.tt.lvruheng.eyepetizer.ui.fragment.HomeFragment
-import com.tt.lvruheng.eyepetizer.ui.fragment.HotFragment
-import com.tt.lvruheng.eyepetizer.ui.fragment.MineFragment
+import com.tt.lvruheng.eyepetizer.ui.fragment.*
 import com.tt.lvruheng.eyepetizer.utils.DateU
 import com.tt.lvruheng.eyepetizer.utils.showToast
 import com.tt.lvruheng.eyepetizer.utils.TextViewU
@@ -118,56 +115,55 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         clearState()
         when (v?.id) {
             R.id.rb_find -> {
-                switchState(rb_find)
-                supportFragmentManager.beginTransaction().show(findFragment)
-                        .hide(homeFragment)
-                        .hide(mineFragment)
-                        .hide(hotFragemnt)
-                        .commit()
-                tv_bar_title.text = "Discover"
-                tv_bar_title.visibility = View.VISIBLE
-                iv_search.setImageResource(R.drawable.icon_search)
+                switchFooterState(rb_find)
+                switchFraState(findFragment, homeFragment, hotFragemnt, mineFragment)
+                switchTitleState("Discover", View.VISIBLE)
+                switchSearchRes(R.drawable.icon_search)
             }
             R.id.rb_home -> {
-                switchState(rb_home)
-                supportFragmentManager.beginTransaction().show(homeFragment)
-                        .hide(findFragment)
-                        .hide(mineFragment)
-                        .hide(hotFragemnt)
-                        .commit()
-                tv_bar_title.text = DateU.getToday()
-                tv_bar_title.visibility = View.VISIBLE
-                iv_search.setImageResource(R.drawable.icon_search)
+                switchFooterState(rb_home)
+                switchFraState(homeFragment, findFragment, hotFragemnt, mineFragment)
+                switchTitleState(DateU.getToday(), View.VISIBLE)
+                switchSearchRes(R.drawable.icon_search)
             }
             R.id.rb_hot -> {
-                switchState(rb_hot)
-                supportFragmentManager.beginTransaction().show(hotFragemnt)
-                        .hide(findFragment)
-                        .hide(mineFragment)
-                        .hide(homeFragment)
-                        .commit()
-                tv_bar_title.text = "Ranking"
-                tv_bar_title.visibility = View.VISIBLE
-                iv_search.setImageResource(R.drawable.icon_search)
+                switchFooterState(rb_hot)
+                switchFraState(hotFragemnt, findFragment, homeFragment, mineFragment)
+                switchTitleState("Ranking", View.VISIBLE)
+                switchSearchRes(R.drawable.icon_search)
             }
             R.id.rb_mine -> {
-                switchState(rb_mine)
-                supportFragmentManager.beginTransaction().show(mineFragment)
-                        .hide(findFragment)
-                        .hide(homeFragment)
-                        .hide(hotFragemnt)
-                        .commit()
-                tv_bar_title.visibility = View.INVISIBLE
-                iv_search.setImageResource(R.drawable.icon_setting)
+                switchFooterState(rb_mine)
+                switchFraState(mineFragment, findFragment, homeFragment, hotFragemnt)
+                switchTitleState("", View.INVISIBLE)
+                switchSearchRes(R.drawable.icon_setting)
             }
         }
 
     }
 
-    private fun switchState(v: RadioButton) {
+    private fun switchFooterState(v: RadioButton) {
         v.isChecked = true
         v.setTextColor(resources.getColor(R.color.black))
 
+    }
+
+    private fun switchSearchRes(res: Int) {
+        iv_search.setImageResource(res)
+
+    }
+
+    private fun switchTitleState(title: String, visible: Int) {
+        tv_bar_title.text = title
+        tv_bar_title.visibility = visible
+    }
+
+    private fun switchFraState(oneFra: Fragment?, twoFra: Fragment?, threeFra: Fragment?, fourFra: Fragment?) {
+        supportFragmentManager.beginTransaction().show(oneFra)
+                .hide(twoFra)
+                .hide(threeFra)
+                .hide(fourFra)
+                .commit()
     }
 
     private fun clearState() {
