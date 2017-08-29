@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.KeyEvent
 import android.view.View
+import android.widget.RadioButton
 import android.widget.Toast
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.search.SEARCH_TAG
@@ -117,8 +118,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         clearState()
         when (v?.id) {
             R.id.rb_find -> {
-                rb_find.isChecked = true
-                rb_find.setTextColor(resources.getColor(R.color.black))
+                switchState(rb_find)
                 supportFragmentManager.beginTransaction().show(findFragment)
                         .hide(homeFragment)
                         .hide(mineFragment)
@@ -129,8 +129,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 iv_search.setImageResource(R.drawable.icon_search)
             }
             R.id.rb_home -> {
-                rb_home.isChecked = true
-                rb_home.setTextColor(resources.getColor(R.color.black))
+                switchState(rb_home)
                 supportFragmentManager.beginTransaction().show(homeFragment)
                         .hide(findFragment)
                         .hide(mineFragment)
@@ -141,8 +140,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 iv_search.setImageResource(R.drawable.icon_search)
             }
             R.id.rb_hot -> {
-                rb_hot.isChecked = true
-                rb_hot.setTextColor(resources.getColor(R.color.black))
+                switchState(rb_hot)
                 supportFragmentManager.beginTransaction().show(hotFragemnt)
                         .hide(findFragment)
                         .hide(mineFragment)
@@ -153,8 +151,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 iv_search.setImageResource(R.drawable.icon_search)
             }
             R.id.rb_mine -> {
-                rb_mine.isChecked = true
-                rb_mine.setTextColor(resources.getColor(R.color.black))
+                switchState(rb_mine)
                 supportFragmentManager.beginTransaction().show(mineFragment)
                         .hide(findFragment)
                         .hide(homeFragment)
@@ -164,6 +161,12 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 iv_search.setImageResource(R.drawable.icon_setting)
             }
         }
+
+    }
+
+    private fun switchState(v: RadioButton) {
+        v.isChecked = true
+        v.setTextColor(resources.getColor(R.color.black))
 
     }
 
