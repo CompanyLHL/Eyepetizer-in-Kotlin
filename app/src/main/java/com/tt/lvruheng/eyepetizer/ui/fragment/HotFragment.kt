@@ -39,4 +39,7 @@ class HotFragment : BaseFragment() {
         tabs.setupWithViewPager(vp_content)
     }
 
+    override fun setListener() {
+    }
+
 }

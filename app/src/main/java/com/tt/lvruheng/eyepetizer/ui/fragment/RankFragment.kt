@@ -42,4 +42,7 @@ class RankFragment : BaseFragment(), HotContract.View {
         mAdapter.notifyDataSetChanged()
     }
 
+    override fun setListener() {
+    }
+
 }

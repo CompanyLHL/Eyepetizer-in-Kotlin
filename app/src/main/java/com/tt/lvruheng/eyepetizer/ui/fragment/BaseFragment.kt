@@ -12,21 +12,23 @@ import android.view.ViewGroup
  * Created by lvruheng on 2017/7/4.
  */
 abstract class BaseFragment : Fragment() {
-    var isFirst : Boolean = false
-    var rootView :View? = null
-    var isFragmentVisiable :Boolean = false
+    var isFirst: Boolean = false
+    var rootView: View? = null
+    var isFragmentVisiable: Boolean = false
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        if(rootView==null){
-            rootView = inflater?.inflate(getLayoutResources(),container,false)
+        if (rootView == null) {
+            rootView = inflater?.inflate(getLayoutResources(), container, false)
         }
-        return  rootView
+        return rootView
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
+        setListener()
 
     }
+
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
         if (isVisibleToUser) {
@@ -36,7 +38,7 @@ abstract class BaseFragment : Fragment() {
             return;
         }
         //可见，并且没有加载过
-        if (!isFirst&&isFragmentVisiable) {
+        if (!isFirst && isFragmentVisiable) {
             onFragmentVisiableChange(true);
             return;
         }
@@ -46,6 +48,7 @@ abstract class BaseFragment : Fragment() {
             isFragmentVisiable = false;
         }
     }
+
     open protected fun onFragmentVisiableChange(b: Boolean) {
 
     }
@@ -54,4 +57,5 @@ abstract class BaseFragment : Fragment() {
     abstract fun getLayoutResources(): Int
 
     abstract fun initView()
+    abstract fun setListener()
 }

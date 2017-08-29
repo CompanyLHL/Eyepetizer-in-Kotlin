@@ -1,22 +1,15 @@
 package com.tt.lvruheng.eyepetizer.ui.fragment
 
-import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
-import android.util.Log.println
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.adapter.HomeAdatper
 import com.tt.lvruheng.eyepetizer.mvp.contract.HomeContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean.IssueListBean.ItemListBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.HomePresenter
-import kotlinx.android.synthetic.main.activity_main.*
+import com.tt.lvruheng.eyepetizer.utils.RegexU
 import kotlinx.android.synthetic.main.home_fragment.*
 import java.util.*
 import java.util.regex.Pattern
@@ -24,15 +17,14 @@ import java.util.regex.Pattern
 /**
  * Created by lvruheng on 2017/7/4.
  */
-class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRefreshListener {
+class HomeFragment : BaseFragment(), HomeContract.View {
     var mIsRefresh: Boolean = false
     var mPresenter: HomePresenter? = null
     var mList = ArrayList<ItemListBean>()
     var mAdapter: HomeAdatper? = null
     var data: String? = null
     override fun setData(bean: HomeBean) {
-        val regEx = "[^0-9]"
-        val p = Pattern.compile(regEx)
+        val p = Pattern.compile(RegexU.numberRegex)
         val m = p.matcher(bean?.nextPageUrl)
         data = m.replaceAll("").subSequence(1, m.replaceAll("").length - 1).toString()
         if (mIsRefresh) {
@@ -59,7 +51,6 @@ class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRef
         recyclerView.layoutManager = LinearLayoutManager(context)
         mAdapter = HomeAdatper(context, mList)
         recyclerView.adapter = mAdapter
-        refreshLayout.setOnRefreshListener(this)
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
@@ -76,10 +67,14 @@ class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRef
 
     }
 
-    override fun onRefresh() {
-        if (!mIsRefresh) {
-            mIsRefresh = true
-            mPresenter?.start()
+    override fun setListener() {
+        refreshLayout.setOnRefreshListener {
+            SwipeRefreshLayout.OnRefreshListener {
+                if (!mIsRefresh) {
+                    mIsRefresh = true
+                    mPresenter?.start()
+                }
+            }
         }
     }
 }

@@ -29,6 +29,10 @@ class FindFragment : BaseFragment(), FindContract.View {
         mPresenter?.start()
         mAdapter = FindAdapter(context, mList)
         gv_find.adapter = mAdapter
+
+    }
+
+    override fun setListener() {
         gv_find.setOnItemClickListener { parent, view, position, id ->
             var bean = mList?.get(position)
             var name = bean?.name
