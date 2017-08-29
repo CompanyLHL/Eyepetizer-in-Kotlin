@@ -17,23 +17,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f770f1ce-334d-4035-8da0-5c5300854c13" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-57-59-000.rawproto" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-58-56-459.rawproto" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-59-35-208.rawproto" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-59-48-594.rawproto" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-57-59-000.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-58-56-459.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-59-35-208.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-08-25-16-59-48-594.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/DateU.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Eyepetizer-in-Kotlin.iml" afterPath="$PROJECT_DIR$/Eyepetizer-in-Kotlin.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,14 +69,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ResultActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/ResultActivity.kt">
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="380">
+              <caret line="124" column="16" lean-forward="false" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
               <folding>
-                <element signature="e#48#165#0" expanded="true" />
+                <element signature="e#48#772#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateU.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/DateU.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,7 +106,7 @@
       <file leaf-file-name="BaseApplication.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseApplication.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="152">
               <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding>
                 <element signature="e#48#109#0" expanded="true" />
@@ -112,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CacheActivity.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CacheActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="110" column="13" lean-forward="true" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+            <state relative-caret-position="1615">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
                 <element signature="e#48#401#0" expanded="true" />
               </folding>
@@ -137,8 +140,8 @@
       <file leaf-file-name="VideoDetailActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="361">
+              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding>
                 <element signature="e#48#151#0" expanded="true" />
               </folding>
@@ -149,7 +152,7 @@
       <file leaf-file-name="WatchActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/WatchActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1501">
+            <state relative-caret-position="1482">
               <caret line="79" column="9" lean-forward="false" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
               <folding>
                 <element signature="e#48#161#0" expanded="true" />
@@ -181,19 +184,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SplashActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/SplashActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-              <folding>
-                <element signature="e#48#193#0" expanded="true" />
-                <marker date="1503651471000" expanded="false" signature="55:137" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -201,8 +191,8 @@
       <list>
         <option value="resourceFile" />
         <option value="layoutResourceFile_vertical" />
-        <option value="Kotlin File" />
         <option value="Class" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -2147,8 +2137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/SpUtils.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/base/MyApplication.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/SPUtils.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_advise.xml" />
@@ -2190,7 +2178,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/SplashActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/AnimationU.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/ResultActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/SplashActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/WatchActivity.kt" />
@@ -2198,6 +2185,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/Date.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/DateU.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt" />
       </list>
     </option>
   </component>
@@ -2223,6 +2213,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2235,100 +2227,9 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eyepetizer" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eyepetizer" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eyepetizer-in-Kotlin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eyepetizer" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2453,7 +2354,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3221,24 +3121,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/WatchActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
@@ -3269,10 +3151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-          <folding>
-            <element signature="e#48#193#0" expanded="true" />
-            <marker date="1503651471000" expanded="false" signature="55:137" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3290,7 +3168,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#48#772#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3343,10 +3223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#48#193#0" expanded="true" />
-            <marker date="1503651471000" expanded="false" signature="55:137" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3377,7 +3253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3425,7 +3300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3433,7 +3307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3456,7 +3329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3464,10 +3336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding>
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3477,10 +3345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="96" column="18" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
-          <folding>
-            <element signature="e#3284#3285#0" expanded="true" />
-            <element signature="e#3335#3336#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3495,7 +3359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3510,9 +3373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="e#42#136#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3520,7 +3380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3531,28 +3390,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1432">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/ResultActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#165#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3560,16 +3407,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-          <folding>
-            <element signature="e#48#193#0" expanded="true" />
-            <marker date="1503651471000" expanded="false" signature="55:137" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/WatchActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
+        <state relative-caret-position="1482">
           <caret line="79" column="9" lean-forward="false" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
           <folding>
             <element signature="e#48#161#0" expanded="true" />
@@ -3579,8 +3422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/VideoDetailActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="361">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding>
             <element signature="e#48#151#0" expanded="true" />
           </folding>
@@ -3596,14 +3439,6 @@
       </provider>
       <provider editor-type-id="android-manifest">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/AdviseActivity.kt">
@@ -3626,7 +3461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/BaseApplication.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="152">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="e#48#109#0" expanded="true" />
@@ -3636,11 +3471,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/CacheActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="110" column="13" lean-forward="true" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+        <state relative-caret-position="1615">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
             <element signature="e#48#401#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/Date.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/utils/DateU.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="124" column="16" lean-forward="false" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding>
+            <element signature="e#48#772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tt/lvruheng/eyepetizer/ui/activity/FindDetailActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

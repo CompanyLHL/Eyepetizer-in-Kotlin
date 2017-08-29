@@ -12,13 +12,23 @@ import com.tt.lvruheng.eyepetizer.ui.fragment.FindFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.HomeFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.HotFragment
 import com.tt.lvruheng.eyepetizer.ui.fragment.MineFragment
+import com.tt.lvruheng.eyepetizer.utils.DateU
 import com.tt.lvruheng.eyepetizer.utils.showToast
-import java.util.*
 import com.tt.lvruheng.eyepetizer.utils.TextViewU
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : BaseActivity(), View.OnClickListener {
+
+    var homeFragment: HomeFragment? = null
+    var findFragment: FindFragment? = null
+    var hotFragemnt: HotFragment? = null
+    var mineFragment: MineFragment? = null
+    var mExitTime: Long = 0
+    var toast: Toast? = null
+    lateinit var searchFragment: SearchFragment
+
+
     override fun needFullScreen(): Boolean = false
 
     override fun getArgs(bundle: Bundle?) {
@@ -37,20 +47,6 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     }
 
     override fun setListener() {
-    }
-
-    var homeFragment: HomeFragment? = null
-    var findFragment: FindFragment? = null
-    var hotFragemnt: HotFragment? = null
-    var mineFragment: MineFragment? = null
-    var mExitTime: Long = 0
-    var toast: Toast? = null
-    lateinit var searchFragment: SearchFragment
-
-    private fun initToolbar() {
-        var today = getToday()
-        tv_bar_title.text = today
-        tv_bar_title.typeface = TextViewU.getTypeFace("fonts/Lobster-1.4.otf")
         iv_search.setOnClickListener {
             if (rb_mine.isChecked) {
                 //todo 点击设置
@@ -63,16 +59,12 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
-    private fun getToday(): String {
-        var list = arrayOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
-        var data: Date = Date()
-        var calendar: Calendar = Calendar.getInstance()
-        calendar.time = data
-        var index: Int = calendar.get(Calendar.DAY_OF_WEEK) - 1
-        if (index < 0) {
-            index = 0
-        }
-        return list[index]
+
+    private fun initToolbar() {
+        var today = DateU.getToday()
+        tv_bar_title.text = today
+        tv_bar_title.typeface = TextViewU.getTypeFace("fonts/Lobster-1.4.otf")
+
     }
 
     private fun initFragment(savedInstanceState: Bundle?) {
@@ -144,7 +136,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                         .hide(mineFragment)
                         .hide(hotFragemnt)
                         .commit()
-                tv_bar_title.text = getToday()
+                tv_bar_title.text = DateU.getToday()
                 tv_bar_title.visibility = View.VISIBLE
                 iv_search.setImageResource(R.drawable.icon_search)
             }
