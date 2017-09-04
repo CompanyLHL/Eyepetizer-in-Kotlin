@@ -32,20 +32,20 @@ abstract class BaseFragment : Fragment() {
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
         if (isVisibleToUser) {
-            isFragmentVisiable = true;
+            isFragmentVisiable = true
         }
         if (rootView == null) {
-            return;
+            return
         }
         //可见，并且没有加载过
         if (!isFirst && isFragmentVisiable) {
-            onFragmentVisiableChange(true);
-            return;
+            onFragmentVisiableChange(true)
+            return
         }
         //由可见——>不可见 已经加载过
         if (isFragmentVisiable) {
-            onFragmentVisiableChange(false);
-            isFragmentVisiable = false;
+            onFragmentVisiableChange(false)
+            isFragmentVisiable = false
         }
     }
 

@@ -9,6 +9,7 @@ import com.tt.lvruheng.eyepetizer.mvp.contract.HomeContract
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean
 import com.tt.lvruheng.eyepetizer.mvp.model.bean.HomeBean.IssueListBean.ItemListBean
 import com.tt.lvruheng.eyepetizer.mvp.presenter.HomePresenter
+import com.tt.lvruheng.eyepetizer.utils.L
 import com.tt.lvruheng.eyepetizer.utils.RegexU
 import kotlinx.android.synthetic.main.home_fragment.*
 import java.util.*
@@ -17,13 +18,23 @@ import java.util.regex.Pattern
 /**
  * Created by lvruheng on 2017/7/4.
  */
-class HomeFragment : BaseFragment(), HomeContract.View {
+class HomeFragment : BaseFragment(), HomeContract.View, SwipeRefreshLayout.OnRefreshListener {
+    override fun onRefresh() {
+        if (!mIsRefresh) {
+            mIsRefresh = true
+            refreshLayout.isRefreshing = true
+            mPresenter?.start()
+        }
+    }
+
     var mIsRefresh: Boolean = false
     var mPresenter: HomePresenter? = null
     var mList = ArrayList<ItemListBean>()
     var mAdapter: HomeAdatper? = null
     var data: String? = null
     override fun setData(bean: HomeBean) {
+        L.line(bean.toString())
+        println(refreshLayout.isRefreshing)
         val p = Pattern.compile(RegexU.numberRegex)
         val m = p.matcher(bean?.nextPageUrl)
         data = m.replaceAll("").subSequence(1, m.replaceAll("").length - 1).toString()
@@ -68,13 +79,6 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     }
 
     override fun setListener() {
-        refreshLayout.setOnRefreshListener {
-            SwipeRefreshLayout.OnRefreshListener {
-                if (!mIsRefresh) {
-                    mIsRefresh = true
-                    mPresenter?.start()
-                }
-            }
-        }
+        refreshLayout.setOnRefreshListener(this)
     }
 }
